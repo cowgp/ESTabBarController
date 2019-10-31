@@ -51,7 +51,9 @@ open class ESTabBarItem: UITabBarItem {
     // MARK: UIBarItem properties
     open override var title: String? // default is nil
         {
-        didSet { self.contentView?.title = title }
+        didSet {
+            //don't do anything here
+        }
     }
     
     open override var image: UIImage? // default is nil
@@ -99,6 +101,7 @@ open class ESTabBarItem: UITabBarItem {
     
     open func setTitle(_ title: String? = nil, image: UIImage? = nil, selectedImage: UIImage? = nil, tag: Int = 0) {
         self.title = title
+        self.contentView?.title = title
         self.image = image
         self.selectedImage = selectedImage
         self.tag = tag
