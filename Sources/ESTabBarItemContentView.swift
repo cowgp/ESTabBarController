@@ -139,7 +139,6 @@ open class ESTabBarItemContentView: UIView {
         return titleLabel
     }()
     
-    
     /// Badge value
     open var badgeValue: String? {
         didSet {
@@ -275,7 +274,6 @@ open class ESTabBarItemContentView: UIView {
                 }
                 badgeView.setNeedsLayout()
             }
-            
         } else {
             if !imageView.isHidden && !titleLabel.isHidden {
                 titleLabel.sizeToFit()
